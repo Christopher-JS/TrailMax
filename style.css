@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 :root {
     --pColor: #f8f8ff;
     --secColor1: #476DFB;
@@ -16,6 +18,7 @@
 body {
     width: 100%;
     height: 100%;
+    font-family: "Poppins", sans-serif;
     background-color: var(--pColor);
 }
 
@@ -86,6 +89,19 @@ main .videoSlides-container {
     border-radius: 1rem;
 }
 
+.videoSlides-container .caroussel-button {
+    position: absolute;
+    color: var(--pColor);
+    font-size: 3rem;
+    opacity: .7;
+    top: 50%;
+    z-index: 1;
+}
+
+.videoSlides-container .next {
+    right: 0;
+}
+
 main .videoSlides-container .video-slide {
     position: relative;
     border-radius: 1rem;
@@ -108,10 +124,14 @@ main .videoSlides-container .video-slide > .movie-details {
 
 .movie-details > .details-container {
     height: 100%;
+    width: 90%;
     position: relative;
     display: grid;
     align-items: center;
     gap: 1rem;
+    top: 8%;
+    bottom: 8%;
+    padding-left: 1.5rem;
 }
 
 .movie-details > .details-container > div {
@@ -119,7 +139,7 @@ main .videoSlides-container .video-slide > .movie-details {
 }
 
 .movie-details h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .movie-details button{
@@ -135,7 +155,106 @@ main .videoSlides-container .video-slide > .movie-details {
     text-decoration: none;
 }
 
+/* Search section */
+section {
+    background-color: var(--tertiaryColor);
+}
 
+.search {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+
+}
+
+.search input[type="search"] {
+    width: 80%;
+    max-width: 800px;
+    padding: 1rem .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+.search span {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    border: 1px solid var(--pColor);
+    border-radius: 50%;
+}
+
+.search span .fa-right-long {
+    color: var(--pColor);
+    padding: .5rem;
+}
+
+/* Movies listing section */
+.mobile-listing-header {
+    width: 100%;
+    max-width: 1400px;
+    color: var(--pColor);
+    display: grid;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.mobile-listing-header > h1 {
+    justify-self: center;
+    margin-bottom: .5rem;
+}
+
+.mobile-listing-header > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.mobile-listing-header > div a {
+    text-decoration: none;
+    color: var(--pColor);
+}
+
+.mobile-listing-header > div a:hover {
+    text-decoration: underline;
+}
+
+.genres, .movies, .series {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 .5rem;
+    padding-bottom: 2rem;
+}
+
+.genres > h2, .movies > h2, .series > h2 {
+    color: white;
+}
+
+.listing-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    gap: 1rem;
+}
+
+.listing-container > div {
+    border: 1px solid white;
+}
+
+.movies, .series {
+    display: none;
+}
+
+
+
+
+@media (min-width: 500px) {
+  .listing-container { grid-template-columns: repeat(2, 1fr); }
+}
 
 
 @media screen and (min-width: 800px) {    
@@ -176,10 +295,11 @@ main .videoSlides-container .video-slide > .movie-details {
     }
 
     .movie-details > .details-container {
+        width: 90%;
+        height: 50%;
+        top: 30%;
         position: relative;
-        padding-left: 2rem;
-        top: 38%;
-        height: 60%;
+        padding-left: 3rem;
     }
 
     .movie-details > .details-container > div {
@@ -187,12 +307,12 @@ main .videoSlides-container .video-slide > .movie-details {
     }
     
     .movie-details .details-container h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .movie-details .details-container > div p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .movie-details button{
@@ -208,22 +328,37 @@ main .videoSlides-container .video-slide > .movie-details {
         font-size: 1.5rem;
         text-decoration: none;
     } 
+
+    /* Movie Listing section */
+    .mobile-listing-header {
+    display: none;
+    }
     
 }
+
+
+@media (min-width: 750px) {
+  .listing-container { grid-template-columns: repeat(3, 1fr); }
+}
+
 
 @media screen and (min-width: 1000px) {
     .movie-details > .details-container {
         position: relative;
-        top: 50%;
+        top: 40%;
         height: 50%;
     }
 
     .movie-details .details-container h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 0.5rem;
     }
 
     .movie-details .details-container > div p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
+}
+
+@media (min-width: 1200px) {
+  .listing-container { grid-template-columns: repeat(4, 1fr); }
 }
