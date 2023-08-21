@@ -4,3 +4,94 @@
     --secColor2: #DC0404;
     --tertiaryColor: #6e7476; 
 }
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pColor);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--tertiaryColor);
+}
+
+nav .nav-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+nav .logo {
+    width: 20%;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav .nav-items {
+    display: none;
+}
+
+nav .login {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+nav .login a {
+    color: var(--pColor);
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (min-width: 800px) {    
+    nav .nav-container {
+        max-width: 1200px;
+        padding: 1rem 1rem;
+    }
+    
+    nav .logo {
+        width: 10%;
+    }
+    
+    nav .logo img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    nav .nav-items {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    nav .nav-items a {
+        text-decoration: none;
+        color: var(--pColor);
+    }
+    
+    
+}
