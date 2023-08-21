@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/33f504fffa.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <title>TrailMax Movies</title>
 </head>
 
@@ -13,7 +14,7 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <img src="./img/Trailmax1.png" alt="Logo">
+                <img src="assets/img/Trailmax1.png" alt="Logo">
             </div>
             <div class="nav-items">
                 <a href="#">Home</a>
@@ -30,6 +31,33 @@
     </nav>
     <!-- Main Section for Trailers -->
     <main>
+        <!-- Sliding button -->
+        <!-- <i class="caroussel-button prev fa-solid fa-chevron-left fa-lg" data-carousel-button="prev"></i>
+        <i class="caroussel-button next fa-solid fa-chevron-left fa-rotate-180 fa-lg" data-carousel-button="next"></i> -->
+
+        <!-- Slides containing Videos -->
+        <div class="videoSlides-container">
+            <div class="video-slide">
+                <div class="video">
+                    <video src="assets/video/antMan.mp4" alt="Ant Man 2 Trailer" poster="assets/img/antMan.jpg"
+                        type="video/mp4" class="trailer" muted autoplay></video>
+                </div>
+                <!-- Movie details subsection -->
+                <div class="movie-details">
+                    <div class="details-container">
+                        <h1>ANT-MAN AND THE WASP| Quantumania</h1>
+                        <div>
+                            <p>Premise. Scott Lang and Hope van Dyne, along with Hope's parents, Hank Pym and Janet van
+                                Dyne, <br> and Lang's daughter, Cassie, go on a new adventure exploring the Quantum
+                                Realm
+                                that pushes <br> their limits and pits them against Kang the Conqueror.</p>
+                            <h3>Out on February 17, 2023</h3>
+                        </div>
+                        <button><a href="#">Watch Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 

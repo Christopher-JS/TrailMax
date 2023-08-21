@@ -24,6 +24,11 @@ img {
     height: auto;
 }
 
+video {
+    width: 100%;
+    height: auto;
+}
+
 nav {
     width: 100%;
     background-color: var(--tertiaryColor);
@@ -55,10 +60,78 @@ nav .login {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    margin-right: .65rem;
+}
+
+nav .login .fa-magnifying-glass {
+    color: var(--pColor);
 }
 
 nav .login a {
     color: var(--pColor);
+    text-decoration: none;
+}
+
+/* Main Section - Video Trailer Section*/
+main {
+    width: 100%;
+    background-color: var(--pColor);
+    padding: .5rem .5rem;
+}
+
+main .videoSlides-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+main .videoSlides-container .video-slide {
+    position: relative;
+    border-radius: 1rem;
+}
+
+main .videoSlides-container .video-slide > .video video {
+    border-radius: 1rem;
+}
+
+main .videoSlides-container .video-slide > .movie-details {
+    height: 98%;
+    width: 100%;
+    color: var(--pColor);
+    background-color: rgba(128, 128, 128, 0.4);
+    position: absolute;
+    top: 0;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.movie-details > .details-container {
+    height: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+}
+
+.movie-details > .details-container > div {
+    display: none;
+}
+
+.movie-details h1 {
+    font-size: 1.8rem;
+}
+
+.movie-details button{
+    width: fit-content;
+    background-color: transparent;
+    padding: .75rem;
+    border-radius: .5rem;
+}
+
+.movie-details button a {
+    color: var(--pColor);
+    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -67,7 +140,7 @@ nav .login a {
 
 @media screen and (min-width: 800px) {    
     nav .nav-container {
-        max-width: 1200px;
+        max-width: 1400px;
         padding: 1rem 1rem;
     }
     
@@ -85,7 +158,7 @@ nav .login a {
         display: flex;
         justify-content: center;
         gap: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     nav .nav-items a {
@@ -93,5 +166,64 @@ nav .login a {
         color: var(--pColor);
     }
     
+    /* Main Section - Video Trailer section (Desktop) */
+    main .videoSlides-container {
+        max-width: 1400px;
+    }
+ 
+    main .videoSlides-container .video-slide > .movie-details {
+        height: 99.5%;
+    }
+
+    .movie-details > .details-container {
+        position: relative;
+        padding-left: 2rem;
+        top: 38%;
+        height: 60%;
+    }
+
+    .movie-details > .details-container > div {
+        display: block;
+    }
     
+    .movie-details .details-container h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .movie-details .details-container > div p {
+        font-size: 1.2rem;
+    }
+    
+    .movie-details button{
+        width: fit-content;
+        background-color: var(--secColor2);
+        padding: 1rem;
+        border: none;
+        border-radius: 1rem;
+    }
+    
+    .movie-details button a {
+        color: var(--pColor);
+        font-size: 1.5rem;
+        text-decoration: none;
+    } 
+    
+}
+
+@media screen and (min-width: 1000px) {
+    .movie-details > .details-container {
+        position: relative;
+        top: 50%;
+        height: 50%;
+    }
+
+    .movie-details .details-container h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .movie-details .details-container > div p {
+        font-size: 1.5rem;
+    }
 }
